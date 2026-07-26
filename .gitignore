@@ -1,0 +1,14 @@
+# Models
+models/*.gguf
+
+# Runtime data
+data/
+
+# Environment
+.env
+
+# Logs
+*.log
+
+# OS
+.DS_Store
