@@ -4,6 +4,7 @@ services:
       context: ./docker/llama.cpp
     container_name: llama
     restart: unless-stopped
+    cpuset: "${LLAMA_CPUSET:-0-3}"
     ports:
       - "8080:8080"
     volumes:
@@ -16,7 +17,18 @@ services:
       - "--port"
       - "8080"
       - "-c"
-      - "8192"
+      - "${CONTEXT_SIZE:-4096}"
+      - "-t"
+      - "${LLAMA_THREADS:-4}"
+      - "-tb"
+      - "${LLAMA_THREADS_BATCH:-4}"
+      - "-b"
+      - "${LLAMA_BATCH_SIZE:-2048}"
+      - "-ub"
+      - "${LLAMA_UBATCH_SIZE:-512}"
+      - "--flash-attn"
+      - "auto"
+      - "--cache-prompt"
 
   open-webui:
     image: ghcr.io/open-webui/open-webui:main

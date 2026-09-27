@@ -6,9 +6,14 @@ data/
 
 # Environment
 .env
+.local-llm.env
 
 # Logs
 *.log
 
 # OS
 .DS_Store
+
+# Misc
+.venv
+*.pyc

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Local LLM Tray
+Comment=Start the Local LLM tray controller
+Exec=local-llm-tray
+Icon=local-llm
+Terminal=false
+X-GNOME-Autostart-enabled=true

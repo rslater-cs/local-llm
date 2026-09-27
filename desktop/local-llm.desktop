@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Local LLM
+Comment=Control the local LLM Docker Compose stack
+Exec=local-llm-tray
+Icon=local-llm
+Terminal=false
+Categories=Utility;Development;
